@@ -1,0 +1,42 @@
+# 🚀 Desafio Front-End Vflows
+
+---
+
+## 📋 Sobre o projeto
+
+Este projeto é um formulário de cadastro de fornecedores e produtos, desenvolvido para o desafio técnico da Vflows.
+
+Aqui eu:
+
+- ✔️ Segui os requisitos do desafio, como HTML5, CSS, Bootstrap, JavaScript ES6 e jQuery 3.5.1  
+- 🏠 Implementei a busca automática do endereço pelo CEP usando a API ViaCEP  
+- ➕ Criei uma tabela dinâmica para adicionar produtos com cálculo automático do total  
+- 📎 Permiti anexar documentos, armazenando-os em memória com opções para visualizar e excluir  
+- 🧾 Montei um JSON final com todos os dados para envio (exibido no console)  
+- ⏳ Usei um modal de loading para simular o envio dos dados  
+
+---
+
+## ⚠️ Dificuldades
+
+- 🤔 Como iniciante, tive algumas dificuldades com a manipulação dos arquivos anexados e a montagem do JSON final  
+- 📝 Trabalhei para deixar o código simples e comentado para facilitar o entendimento e a manutenção  
+- 🎯 Segui o máximo possível do que foi pedido, mesmo que com soluções simples  
+
+---
+
+## 🚀 Como usar
+
+1. Clone ou baixe o repositório  
+2. Abra o arquivo `index.html` no navegador   
+3. Preencha o formulário, adicione produtos e documentos  
+4. Clique em **Salvar Fornecedor** para ver o JSON no console e o modal de envio  
+
+---
+
+## 🛠 Tecnologias usadas
+
+- HTML5  
+- CSS3 + Bootstrap 5  
+- JavaScript ES6 + jQuery 3.5.1  
+- API ViaCEP para consulta de CEP  

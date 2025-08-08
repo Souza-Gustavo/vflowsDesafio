@@ -1,102 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Fornecedor</title>
+  <meta charset="UTF-8">
+  <title>Cadastro de Fornecedor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <div class="container mt-5">
-        <h1>Cadastro de Fornecedor</h1>
-        <form id="form-fornecedor">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="razaoSocial">Razão Social *</label>
-                    <input type="text" class="form-control" id="razaoSocial" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="nomeFantasia">Nome Fantasia *</label>
-                    <input type="text" class="form-control" id="nomeFantasia" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="cnpj">CNPJ *</label>
-                        <input type="text" class="form-control" id="cnpj" required>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inscricaoEstadual">Inscrição Estadual</label>
-                        <input type="text" class="form-control" id="inscricaoEstadual">
-                    </div>
-                     <div class="form-group col-md-4">
-                        <label for="inscricaoMunicipal">Inscrição Municipal</label>
-                        <input type="text" class="form-control" id="inscricaoMunicipal">
-                     </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label for="cep">CEP *</label>
-                        <input type="text" class="form-control" id="cep" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="endereco">Endereço *</label>
-                        <input type="text" class="form-control" id="endereco" required readonly>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="contato">Nome para Contato *</label>
-                        <input type="text" class="form-control" id="contato" required>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="telefone">Telefone *</label>
-                        <input type="text" class="form-control" id="telefone" required>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="email">E-mail *</label>
-                        <input type="text" class="form-control" id="email" required>
-                    </div>
-                </div>
+  <div class="container my-4">
+    <h2 class="text-center mb-4">Cadastro de Fornecedor</h2>
 
-            <hr>
-            <h4>Produtos</h4>
-            <table class="table table-bordered" id="tabelaProdutos">
-                <thead class="thead-ligth">
-                    <tr>
-                        <th>Descrição *</th>
-                        <th>Unidade de medida *</th>
-                        <th>Qtd. Estoque *</th>
-                        <th>Valor Unitario *</th>
-                        <th>Valor Total</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--Linha de produtos adicionados-->
-                </tbody>
-            </table>
+    <form id="form-fornecedor">
 
-            <button type="button" class="btn btn-primary" id="adicionarProduto">Adicionar Produto</button>
+      <!-- DADOS DO FORNECEDOR -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="razaoSocial" class="form-label">Razão Social *</label>
+          <input type="text" class="form-control" id="razaoSocial" required>
+        </div>
+        <div class="col-md-6">
+          <label for="nomeFantasia" class="form-label">Nome Fantasia *</label>
+          <input type="text" class="form-control" id="nomeFantasia" required>
+        </div>
+      </div>
 
-        </form>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="cnpj" class="form-label">CNPJ *</label>
+          <input type="text" class="form-control" id="cnpj" required>
+        </div>
+        <div class="col-md-4">
+          <label for="inscricaoEstadual" class="form-label">Inscrição Estadual</label>
+          <input type="text" class="form-control" id="inscricaoEstadual">
+        </div>
+        <div class="col-md-4">
+          <label for="inscricaoMunicipal" class="form-label">Inscrição Municipal</label>
+          <input type="text" class="form-control" id="inscricaoMunicipal">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <label for="cep" class="form-label">CEP *</label>
+          <input type="text" class="form-control" id="cep" required>
+        </div>
+        <div class="col-md-9">
+          <label for="endereco" class="form-label">Endereço *</label>
+          <input type="text" class="form-control" id="endereco" required readonly>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="contato" class="form-label">Nome para Contato *</label>
+          <input type="text" class="form-control" id="contato" required>
+        </div>
+        <div class="col-md-4">
+          <label for="telefone" class="form-label">Telefone *</label>
+          <input type="text" class="form-control" id="telefone" required>
+        </div>
+        <div class="col-md-4">
+          <label for="email" class="form-label">E-mail *</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+      </div>
+
+      <!-- ANEXOS -->
+      <div class="mb-3">
+        <label for="anexoFornecedor" class="form-label">Anexar Documento *</label>
+        <input type="file" class="form-control" id="anexoFornecedor" required multiple>
+        <div id="listaAnexos" class="mt-2"></div>
+      </div>
+
+      <!-- PRODUTOS -->
+      <hr>
+      <h4 class="mt-4">Produtos</h4>
+      <table class="table table-bordered" id="tabelaProdutos">
+        <thead class="table-light">
+          <tr>
+            <th>Descrição *</th>
+            <th>Unidade *</th>
+            <th>Qtd. Estoque *</th>
+            <th>Valor Unitário *</th>
+            <th>Valor Total</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas de produtos vão aqui -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-end fw-bold">Total Geral:</td>
+            <td id="totalGeral">0.00</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="mb-3">
+        <button type="button" class="btn btn-primary" id="adicionarProduto">Adicionar Produto</button>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal de Loading -->
+  <div class="modal fade" id="modalLoading" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0 shadow-none">
+        <div class="modal-body text-center">
+          <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;"></div>
+          <p class="mt-3 fs-5 text-primary">Enviando dados...</p>
+        </div>
+      </div>
     </div>
+  </div>
 
-    
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/script.js"></script>
-
-
-    
 </body>
 </html>
